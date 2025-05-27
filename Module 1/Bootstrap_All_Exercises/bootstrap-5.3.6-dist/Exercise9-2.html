@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button Groups and Toggles</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Button Groups and Toggle Buttons</h2>
+
+    <!-- Button Group -->
+    <div class="btn-group mb-4" role="group" aria-label="Basic group">
+      <button type="button" class="btn btn-outline-primary">Left</button>
+      <button type="button" class="btn btn-outline-primary">Middle</button>
+      <button type="button" class="btn btn-outline-primary">Right</button>
+    </div>
+
+    <h5 class="mb-3">Toggle Options</h5>
+    <!-- Toggle Buttons -->
+    <div class="btn-group" role="group" data-bs-toggle="buttons">
+      <input type="checkbox" class="btn-check" id="toggle1" autocomplete="off">
+      <label class="btn btn-outline-success" for="toggle1">Option 1</label>
+
+      <input type="checkbox" class="btn-check" id="toggle2" autocomplete="off">
+      <label class="btn btn-outline-success" for="toggle2">Option 2</label>
+
+      <input type="checkbox" class="btn-check" id="toggle3" autocomplete="off">
+      <label class="btn btn-outline-success" for="toggle3">Option 3</label>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

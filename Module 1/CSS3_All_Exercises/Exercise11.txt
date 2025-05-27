@@ -1,0 +1,28 @@
+To debug the layout issue reported on smaller screens, I used Chrome DevTools and followed a step-by-step approach:
+
+Simulated Mobile Devices:
+
+=>I opened the page in Chrome and clicked the device toolbar icon (Toggle Device Toolbar) to simulate various screen sizes like mobile, tablet, and custom widths.
+
+This helped me quickly reproduce the layout breaking issue reported by users.
+
+Inspected Styles Live:
+
+=>I used the Elements tab to select the affected elements and reviewed their applied CSS styles.
+
+=>I tested different style values (like padding, margin, and widths) live in the browser to see what fixes the issue.
+
+This made it easier to identify which media queries or styles were causing the layout to break on smaller screens.
+
+Checked External CSS in Network Tab:
+
+=>I went to the Network tab and refreshed the page to verify that the external CSS file (e.g., Bootstrap or custom styles) was loading properly.
+
+=>I made sure there were no 404 errors and that the correct styles were being applied.
+
+Used VS Code for Final Fix:
+
+=>Once I identified the fixes, I switched to VS Code to update the actual CSS or HTML files accordingly.
+
+I then re-tested in the browser to confirm the layout was now responsive and fixed across screen sizes.
+

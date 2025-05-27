@@ -1,0 +1,9 @@
+// custom.scss
+ 
+// scss/custom.scss
+
+// Override variables BEFORE Bootstrap is imported
+@import "custom-variables";
+
+// Then load full Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

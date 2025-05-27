@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Grid Structure</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .box {
+      background-color: #198754;
+      color: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Step 1: Use a Bootstrap container to wrap the layout -->
+  <div class="container mt-5">
+
+    <!-- Step 2: Create a row to hold columns -->
+    <div class="row">
+
+      <!-- Step 3: Add columns with different responsive widths -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box">Box 1</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box">Box 2</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box">Box 3</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box">Box 4</div>
+      </div>
+
+    </div> <!-- End of row -->
+  </div> <!-- End of container -->
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #4CAF50;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  list-style-position: inside;
+  display: flex;
+  gap: 15px;
+  background-color: #333;
+  padding: 10px;
+}
+nav ul li {
+  padding: 8px;
+  margin: 0 5px;
+}
+nav ul li a:link {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:visited {
+  color: #ddd;
+}
+nav ul li a:hover {
+  color: #4CAF50;
+}
+nav ul li a:active {
+  color: yellow;
+}
+
+/* Section Styles */
+section {
+  margin-top: 30px;
+}
+
+/* Table Styling - Exercise 7 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}

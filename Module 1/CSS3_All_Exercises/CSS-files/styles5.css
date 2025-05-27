@@ -1,0 +1,150 @@
+/* ============================
+   RESET STYLES
+   ============================ */
+
+/* Universal selector to reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================
+   HEADER SECTION
+   ============================ */
+
+/* ID selector for the main site header */
+#mainHeader {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* ============================
+   EVENT STYLES
+   ============================ */
+
+/* Element selector for all event section titles */
+h2 {
+  color: #e67e22;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Class selector for reusable event card container */
+.eventCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+
+/* ============================
+   TEXT GROUPING STYLES
+   ============================ */
+
+/* Grouping selector for shared styles */
+h3, p {
+  font-family: 'Verdana', sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* ============================
+   BODY STYLES
+   ============================ */
+
+/* Fallback background color with a background image */
+body {
+  background-color: #f0f0f0; /* fallback */
+  background-image: url('images/community-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333; /* base text color */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ============================
+   EVENT CARD STYLING
+   ============================ */
+
+/* Apply RGBA for subtle card background */
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+/* ============================
+   SECTION HEADER WITH GRADIENT
+   ============================ */
+
+/* Example: Section headers with a bold gradient background */
+.section-header {
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+
+
+/* === Typography: Fonts and Text === */
+
+/* Set general body font */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Style for main heading */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Section headers */
+.section-header {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+/* Paragraph text */
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  text-transform: none;
+  color: #555;
+}

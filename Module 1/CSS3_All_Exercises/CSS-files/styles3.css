@@ -1,0 +1,56 @@
+/* ============================
+   RESET STYLES
+   ============================ */
+
+/* Universal selector to reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ============================
+   HEADER SECTION
+   ============================ */
+
+/* ID selector for the main site header */
+#mainHeader {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* ============================
+   EVENT STYLES
+   ============================ */
+
+/* Element selector for all event section titles */
+h2 {
+  color: #e67e22;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Class selector for reusable event card container */
+.eventCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+
+/* ============================
+   TEXT GROUPING STYLES
+   ============================ */
+
+/* Grouping selector for shared styles */
+h3, p {
+  font-family: 'Verdana', sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}

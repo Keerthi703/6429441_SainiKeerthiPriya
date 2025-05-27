@@ -1,0 +1,16 @@
+/* Header styles */
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+/* Subheading specific style */
+.subheading {
+  color: #2c3e50;
+  font-size: 1.5em;
+}
+
+/* Paragraph styles */
+p {
+  color: #555;
+  line-height: 1.6;
+} 

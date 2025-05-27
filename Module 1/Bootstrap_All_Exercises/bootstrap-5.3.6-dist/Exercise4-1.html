@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two Column Layout</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    /* Just for visual clarity */
+    .sidebar {
+      background-color: #6c757d; /* Bootstrap secondary color */
+      color: white;
+      padding: 20px;
+      min-height: 200px;
+    }
+    .content {
+      background-color: #0d6efd; /* Bootstrap primary color */
+      color: white;
+      padding: 20px;
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-12 col-md-3 sidebar">
+        Sidebar (col-md-3)
+      </div>
+      <!-- Content Area -->
+      <div class="col-12 col-md-9 content">
+        Content Area (col-md-9)
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

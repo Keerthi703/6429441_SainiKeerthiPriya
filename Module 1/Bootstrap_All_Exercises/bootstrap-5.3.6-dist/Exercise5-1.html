@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centered Content</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    .center-box {
+      background-color: #20c997; /* Bootstrap teal */
+      color: white;
+      padding: 20px;
+    }
+    .full-height {
+      height: 300px;
+      background-color: #f8f9fa; /* Light gray */
+      border: 1px dashed #ced4da;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <!-- Full-height row to show vertical centering -->
+    <div class="row full-height justify-content-center align-items-center">
+      <!-- Centered box -->
+      <div class="col-6 col-md-4 center-box text-center">
+        Centered Box
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+When we download Bootstrap manually, we'll typically get a folder structure like this:
+
+bootstrap/
+├── css/
+├── js/
+└── icons/ (optional, if Bootstrap Icons are included)
+Here’s a breakdown of each folder and its purpose:
+
+📁 1. css/ – Cascading Style Sheets
+This folder contains all the Bootstrap stylesheets, which define how elements look.
+
+Common files inside:
+
+bootstrap.css: The full, unminified Bootstrap CSS.
+
+bootstrap.min.css: The minified version (smaller file size for production).
+
+bootstrap.rtl.css / bootstrap.rtl.min.css: CSS with right-to-left (RTL) support for languages like Arabic or Hebrew.
+
+bootstrap-grid.css / bootstrap-grid.min.css: Only the grid system, without other Bootstrap components.
+
+bootstrap-reboot.css: A modern CSS reset to normalize browser styles.
+
+Purpose:
+These stylesheets control the layout, spacing, colors, typography, buttons, forms, etc., that Bootstrap offers.
+
+📁 2. js/ – JavaScript Files
+This folder contains Bootstrap’s JavaScript plugins that add interactivity.
+
+Common files inside:
+
+bootstrap.bundle.js: Includes all Bootstrap JavaScript plugins plus Popper.js (needed for tooltips, dropdowns, etc.).
+
+bootstrap.bundle.min.js: The minified version for production.
+
+bootstrap.js / bootstrap.min.js: Bootstrap plugins without Popper (requires you to include Popper separately if needed).
+
+Purpose:
+Handles interactivity like modals, carousels, dropdowns, tooltips, collapse (for navbars, accordions), etc.
+
+📁 3. icons/ – Bootstrap Icons (if included)
+This optional folder contains SVG icons from the Bootstrap Icons library.
+
+Common files inside:
+
+Individual .svg icon files
+
+bootstrap-icons.css and bootstrap-icons.woff or .woff2: Used if you're loading icons via CSS.
+

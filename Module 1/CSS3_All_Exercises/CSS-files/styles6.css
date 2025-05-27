@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+  list-style-type: none;              /* Remove default bullets */
+  list-style-position: inside;        /* Optional: bullet inside if added */
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu li {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.nav-menu a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu a:visited {
+  color: lightgray;
+}
+
+.nav-menu a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.nav-menu a:active {
+  color: red;
+}
+
+/* Event List Styles */
+.event-list {
+  list-style-type: square;            /* Custom bullet style */
+  padding-left: 20px;
+}
+
+.event-list li {
+  padding: 5px 0;
+  margin-left: 10px;
+}
+
+/* Link inside content */
+a:link {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #4b0082;
+}
+
+a:hover {
+  color: #ff6600;
+}
+
+a:active {
+  color: darkred;
+}

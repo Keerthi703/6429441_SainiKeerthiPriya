@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .filters, .registration-form {
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .event-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.01);
+    }
+
+    .event-card h3 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    .event-card p {
+      color: #666;
+      margin: 5px 0;
+    }
+
+    button {
+      background-color: #4A90E2;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    input, select {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .loading {
+      display: none;
+      margin: 10px auto;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #4A90E2;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🌟 Welcome to the Local Community Event Portal 🌟
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by event name..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="music">Music</option>
+        <option value="workshop">Workshop</option>
+        <option value="sports">Sports</option>
+      </select>
+    </div>
+
+    <div class="registration-form">
+      <h3>Register for an Event</h3>
+      <form id="registrationForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <select name="event" required>
+          <option value="">-- Select Event --</option>
+        </select>
+        <button type="submit">Register</button>
+        <div id="message"></div>
+      </form>
+    </div>
+
+    <div id="eventsContainer"></div>
+    <div class="loading" id="loader"></div>
+  </div>
+
+  <script>
+    alert("Page is fully loaded!");
+    console.log("Welcome to the Community Portal");
+
+    const events = [
+      { name: "Music Fest", date: "2025-07-01", seats: 10, category: "music", location: "Park" },
+      { name: "Baking Workshop", date: "2025-06-15", seats: 0, category: "workshop", location: "Community Hall" },
+      { name: "Football Match", date: "2025-08-10", seats: 25, category: "sports", location: "Stadium" }
+    ];
+
+    class Event {
+      constructor(name, date, seats, category, location) {
+        this.name = name;
+        this.date = date;
+        this.seats = seats;
+        this.category = category;
+        this.location = location;
+      }
+
+      checkAvailability() {
+        return this.seats > 0 && new Date(this.date) > new Date();
+      }
+    }
+
+    const communityEvents = events.map(e => new Event(e.name, e.date, e.seats, e.category, e.location));
+
+    function displayEvents(list = communityEvents) {
+      const container = document.getElementById("eventsContainer");
+      container.innerHTML = '';
+      list.forEach(event => {
+        if (event.checkAvailability()) {
+          const card = document.createElement("div");
+          card.className = "event-card";
+          card.innerHTML = `
+            <h3>${event.name}</h3>
+            <p>Date: ${event.date}</p>
+            <p>Seats: ${event.seats}</p>
+            <p>Category: ${event.category}</p>
+            <button onclick="registerUser('${event.name}')">Register</button>
+          `;
+          container.appendChild(card);
+        }
+      });
+
+      const eventSelect = document.querySelector("select[name='event']");
+      eventSelect.innerHTML = `<option value="">-- Select Event --</option>`;
+      list.forEach(event => {
+        if (event.checkAvailability()) {
+          eventSelect.innerHTML += `<option value="${event.name}">${event.name}</option>`;
+        }
+      });
+    }
+
+    function registerUser(eventName) {
+      const event = communityEvents.find(e => e.name === eventName);
+      try {
+        if (event.seats > 0) {
+          event.seats--;
+          alert(`You have successfully registered for ${event.name}!`);
+          displayEvents();
+        } else {
+          alert("Sorry, no seats available.");
+        }
+      } catch (error) {
+        console.error("Registration error:", error);
+      }
+    }
+
+    function filterEventsByCategory(category) {
+      const filtered = category === "all" ? communityEvents : communityEvents.filter(e => e.category === category);
+      displayEvents(filtered);
+    }
+
+    document.getElementById("categoryFilter").onchange = function () {
+      filterEventsByCategory(this.value);
+    };
+
+    document.getElementById("searchInput").addEventListener("keydown", function (e) {
+      const query = e.target.value.toLowerCase();
+      const filtered = communityEvents.filter(event => event.name.toLowerCase().includes(query));
+      displayEvents(filtered);
+    });
+
+    document.getElementById("registrationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const email = this.email.value;
+      const selectedEvent = this.event.value;
+
+      if (!name || !email || !selectedEvent) {
+        document.getElementById("message").textContent = "Please fill all fields!";
+        return;
+      }
+
+      document.getElementById("loader").style.display = "block";
+
+      const userData = { name, email, event: selectedEvent };
+
+      setTimeout(() => {
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(userData)
+        })
+          .then(res => res.json())
+          .then(data => {
+            $("#message").fadeIn().text("Registered successfully!");
+            document.getElementById("registrationForm").reset();
+          })
+          .catch(() => {
+            $("#message").fadeIn().text("Registration failed.");
+          })
+          .finally(() => {
+            document.getElementById("loader").style.display = "none";
+          });
+      }, 1000);
+    });
+
+    displayEvents();
+  </script>
+</body>
+</html>

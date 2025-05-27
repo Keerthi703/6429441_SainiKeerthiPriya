@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="styles8.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>Local Community Events</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="event-section">
+    <h2>Featured Events</h2>
+    <div class="eventCard">
+      <h3>Spring Festival</h3>
+      <p>Come join the fun with food, music, and games!</p>
+    </div>
+    <div class="eventCard">
+      <h3>Art Walk</h3>
+      <p>Experience local art displays and live performances.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Upcoming Events Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Neighborhood Cleanup</td>
+          <td>2025-06-01</td>
+          <td>Main Park</td>
+          <td>Scheduled</td>
+        </tr>
+        <tr>
+          <td>Community Potluck</td>
+          <td>2025-06-10</td>
+          <td>Town Hall</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>Outdoor Movie Night</td>
+          <td>2025-06-15</td>
+          <td>Riverfront</td>
+          <td>Postponed</td>
+        </tr>
+        <tr>
+          <td>Art & Craft Fair</td>
+          <td>2025-06-20</td>
+          <td>Community Center</td>
+          <td>Confirmed</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!-- Exercise 8: Box Model & Layout Control -->
+<section>
+  <h2>Upcoming Events</h2>
+
+  <div class="eventCard">
+    <h3>Community Clean-Up</h3>
+    <p>Join us this weekend to clean up the local park. All supplies provided.</p>
+  </div>
+
+  <div class="eventCard hidden-box">
+    <h3>Hidden Event</h3>
+    <p>This event is hidden using visibility: hidden.</p>
+  </div>
+
+  <div class="eventCard none-box">
+    <h3>None Event</h3>
+    <p>This event is hidden using display: none.</p>
+  </div>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" class="highlight">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+  </form>
+</section>
+
+
+</body>
+</html>
